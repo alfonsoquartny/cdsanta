@@ -18,13 +18,13 @@ MonoBehaviour:
     value: 1
   focusDistance:
     overrideState: 1
-    value: 10
+    value: 13.2
   aperture:
     overrideState: 1
-    value: 17.4
+    value: 20.6
   focalLength:
     overrideState: 1
-    value: 155
+    value: 180
   kernelSize:
     overrideState: 1
     value: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.289
+    value: 0.382
   smoothness:
     overrideState: 1
     value: 0.568
@@ -191,7 +191,7 @@ MonoBehaviour:
     value: 0.34
   color:
     overrideState: 1
-    value: {r: 2.1762235, g: 1.4669516, b: 0.15397805, a: 1}
+    value: {r: 2.79544, g: 1.8880198, b: 0.20490137, a: 1}
   fastMode:
     overrideState: 1
     value: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 0.712
+    value: 0
   fastMode:
     overrideState: 0
     value: 0
@@ -1595,21 +1595,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f6f3f7c722b4544b97e3c75840aa33, type: 3}
   m_Name: AutoExposure
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
   filtering:
-    overrideState: 0
-    value: {x: 50, y: 95}
+    overrideState: 1
+    value: {x: 53.999992, y: 99}
   minLuminance:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: -0.23
   maxLuminance:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 3.84
   keyValue:
-    overrideState: 0
+    overrideState: 1
     value: 1
   eyeAdaptation:
     overrideState: 1
