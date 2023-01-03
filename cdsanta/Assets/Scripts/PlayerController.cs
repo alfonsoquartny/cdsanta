@@ -25,5 +25,14 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+
+        if (Input.GetKey(KeyCode.A))
+        {
+          gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 }
