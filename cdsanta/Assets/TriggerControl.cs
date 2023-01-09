@@ -30,6 +30,7 @@ public class TriggerControl : MonoBehaviour
         if (collision.gameObject.CompareTag("bank"))
         {
             bankAnimator.SetBool("bank", false);
+            bankAnimator.SetBool("stories", false);
         }
     }
 }
