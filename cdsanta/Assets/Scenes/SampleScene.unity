@@ -840,7 +840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f52c38ce3c32d249bafa7492a60cc3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bankAnimator: {fileID: 0}
+  bankAnimator: {fileID: 286304780}
 --- !u!1 &202363828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,6 +1922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c4cc061d64577e4cbd9431b1cf38452, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Triggercontrol: {fileID: 201865916}
 --- !u!1 &524516717
 GameObject:
   m_ObjectHideFlags: 0
@@ -3244,7 +3245,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 838771586}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: uiController, Assembly-CSharp
+        m_MethodName: StoriesGeriButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &838771586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3447,7 +3460,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 878763738}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: uiController, Assembly-CSharp
+        m_MethodName: DevamEtButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &878763738
 MonoBehaviour:
   m_ObjectHideFlags: 0

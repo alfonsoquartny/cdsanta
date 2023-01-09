@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class uiController : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+
+    public TriggerControl Triggercontrol;
     void Start()
     {
         
@@ -20,6 +22,12 @@ public class uiController : MonoBehaviour
 
     public void DevamEtButton()
     {
+        Triggercontrol.bankAnimator.SetBool("stories", true);
+    }
+
+public void StoriesGeriButton()
+    {
+        Triggercontrol.bankAnimator.SetBool("stories", false);
 
     }
 }
