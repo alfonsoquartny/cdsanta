@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class uiController : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -14,5 +15,11 @@ public class uiController : MonoBehaviour
     void Update()
     {
         
+    }
+
+
+    public void DevamEtButton()
+    {
+
     }
 }
