@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class uiController : MonoBehaviour
 {
 
@@ -30,4 +31,11 @@ public void StoriesGeriButton()
         Triggercontrol.bankAnimator.SetBool("stories", false);
 
     }
+
+
+    public void sceneLoader(int sahne)
+    {
+        SceneManager.LoadScene(sahne);
+    }
 }
+
