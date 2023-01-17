@@ -10,6 +10,8 @@ public class Deadeye : MonoBehaviour
      Vector3 cursorVec;
 
     public GameObject cursor;
+
+    public bool canDeployX;
     void Start()
     {
         canDeadEye = true;
@@ -26,10 +28,7 @@ public class Deadeye : MonoBehaviour
 
         if (DeadEye == true)
         {
-            if (cursor.gameObject.CompareTag("enemy"))
-            {
-                Debug.Log("ssh");
-            }
+        
         }
 
 
@@ -40,6 +39,11 @@ public class Deadeye : MonoBehaviour
         cursorVec = Camera.main.ScreenToWorldPoint(mousePos);
 
         cursor.transform.position = testvec;
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
 
     }
 }
