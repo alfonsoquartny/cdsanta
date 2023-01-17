@@ -15,6 +15,8 @@ public class Deadeye : MonoBehaviour
 
     public GameObject deadeyeScreen;
     public GameObject x;
+
+    public List<GameObject> prefabs;
     void Start()
     {
         canDeadEye = true;
@@ -37,26 +39,26 @@ public class Deadeye : MonoBehaviour
         if (DeadEye == true)
         {
             deadeyeScreen.SetActive(true);
+            Time.timeScale = 0.15f;
+
             if (canDeployX == true)
             {
                 if (Input.GetKeyDown(KeyCode.Q))
                 {
                     var xPrefab= Instantiate(x, testvec, Quaternion.identity);
-
-                    if (Input.GetKeyDown(KeyCode.Mouse0))
-                    {
-                        Destroy(xPrefab);
-                        canDeadEye = false;
-
-                        DeadEye = false;
-                    }
+                    prefabs.Add(xPrefab);
+                   
                 }
             }
         }
-        else
+        if (DeadEye == false)
         {
+            Time.timeScale = 1f;
+
             deadeyeScreen.SetActive(false);
+            GameObject.Destroy(prefabs[int.MaxValue]);
         }
+          
 
 
       
