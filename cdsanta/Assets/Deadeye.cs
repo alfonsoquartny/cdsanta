@@ -12,6 +12,9 @@ public class Deadeye : MonoBehaviour
     public GameObject cursor;
 
     public bool canDeployX;
+
+    public GameObject deadeyeScreen;
+    public GameObject x;
     void Start()
     {
         canDeadEye = true;
@@ -20,6 +23,11 @@ public class Deadeye : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 testvec = new Vector3(cursorVec.x, cursorVec.y, 0);
+
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = Camera.main.nearClipPlane;
+        cursorVec = Camera.main.ScreenToWorldPoint(mousePos);
         if (canDeadEye == true&&Input.GetKeyDown(KeyCode.Mouse2))
         {
             DeadEye=!DeadEye;
@@ -28,15 +36,30 @@ public class Deadeye : MonoBehaviour
 
         if (DeadEye == true)
         {
-        
+            deadeyeScreen.SetActive(true);
+            if (canDeployX == true)
+            {
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    var xPrefab= Instantiate(x, testvec, Quaternion.identity);
+
+                    if (Input.GetKeyDown(KeyCode.Mouse0))
+                    {
+                        Destroy(xPrefab);
+                        canDeadEye = false;
+
+                        DeadEye = false;
+                    }
+                }
+            }
+        }
+        else
+        {
+            deadeyeScreen.SetActive(false);
         }
 
 
-        Vector3 testvec = new Vector3(cursorVec.x, cursorVec.y,0);
-
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = Camera.main.nearClipPlane;
-        cursorVec = Camera.main.ScreenToWorldPoint(mousePos);
+      
 
         cursor.transform.position = testvec;
 
