@@ -20,10 +20,15 @@ public class Deadeye : MonoBehaviour
     void Start()
     {
         canDeadEye = true;
-        Cursor.visible = false;
     }
 
     // Update is called once per frame
+
+
+    private void FixedUpdate()
+    {
+        Cursor.visible = false;
+    }
     void Update()
     {
 
@@ -67,7 +72,7 @@ public class Deadeye : MonoBehaviour
 
             }
 
-          // prefabs.Clear(); list array ý temizler
+          // prefabs.Clear(); list array ý temizler //*kurþun gittikten sonra sildirt*//
 
 
 
