@@ -60,22 +60,21 @@ public class Deadeye : MonoBehaviour
             Time.timeScale = 1f;
 
             deadeyeScreen.SetActive(false);
-            prefabs.Clear();
 
-           
-            
-                if(prefabs.Count == 0)
-                {
-                for (var i = 0; i < prefabs.Count; i++)
-                {
-                    GameObject.Destroy(prefabs[i]);
-
-                }
+            for (var i = 0; i < prefabs.Count; i++)
+            {
+                GameObject.Destroy(prefabs[i]);
 
             }
 
-            
-        }   
+          // prefabs.Clear(); list array ý temizler
+
+
+
+
+
+
+        }
 
     }
 
