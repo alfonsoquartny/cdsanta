@@ -20,16 +20,20 @@ public class Deadeye : MonoBehaviour
     void Start()
     {
         canDeadEye = true;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+
         Vector3 testvec = new Vector3(cursorVec.x, cursorVec.y, 0);
 
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = Camera.main.nearClipPlane;
         cursorVec = Camera.main.ScreenToWorldPoint(mousePos);
+        cursor.transform.position = testvec;
+            
         if (canDeadEye == true&&Input.GetKeyDown(KeyCode.Mouse2))
         {
             DeadEye=!DeadEye;
@@ -39,7 +43,7 @@ public class Deadeye : MonoBehaviour
         if (DeadEye == true)
         {
             deadeyeScreen.SetActive(true);
-            Time.timeScale = 0.15f;
+            Time.timeScale = 0.3f;
 
             if (canDeployX == true)
             {
@@ -56,16 +60,19 @@ public class Deadeye : MonoBehaviour
             Time.timeScale = 1f;
 
             deadeyeScreen.SetActive(false);
-            GameObject.Destroy(prefabs[int.MaxValue]);
+            for(var i=0; i < prefabs.Count; i++)
+            {
+                GameObject.Destroy(prefabs[i]);
+
+            }
         }
-          
-
-
-      
-
-        cursor.transform.position = testvec;
 
     }
+
+
+
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
